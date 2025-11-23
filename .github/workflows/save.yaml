@@ -26,6 +26,7 @@ jobs:
           CLIENT_ID: ${{ secrets.CLIENT_ID }}
           CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
           REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+          DAYLIST_EMBED_ID: ${{ secrets.DAYLIST_EMBED_ID }}
           PLAYLISTS_CONFIG: ${{ secrets.PLAYLISTS_CONFIG }}
 
       - name: Keepalive
