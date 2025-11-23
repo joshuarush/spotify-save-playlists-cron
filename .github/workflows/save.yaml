@@ -1,8 +1,8 @@
-name: Save songs
+name: Save Daylist Snapshots
 
 on:
   schedule:
-  - cron: '30 6 * * *'
+  - cron: '0 7,13,18,23 * * *'
   workflow_dispatch:
 
 jobs:
