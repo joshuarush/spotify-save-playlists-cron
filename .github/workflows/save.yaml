@@ -5,15 +5,19 @@ on:
   - cron: '0 7,13,18,23 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+  actions: write
+
 jobs:
   execute-cron:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code	
-        uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
       - name: Setup Python Environment
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
@@ -30,4 +34,4 @@ jobs:
           PLAYLISTS_CONFIG: ${{ secrets.PLAYLISTS_CONFIG }}
 
       - name: Keepalive
-        uses: gautamkrishnar/keepalive-workflow@v1
+        uses: gautamkrishnar/keepalive-workflow@v2
