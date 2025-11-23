@@ -32,6 +32,3 @@ jobs:
           REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
           DAYLIST_EMBED_ID: ${{ secrets.DAYLIST_EMBED_ID }}
           PLAYLISTS_CONFIG: ${{ secrets.PLAYLISTS_CONFIG }}
-
-      - name: Keepalive
-        uses: gautamkrishnar/keepalive-workflow@v2
